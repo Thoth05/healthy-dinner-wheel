@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>今晚吃什麼（健康版）</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0faf5;
+      color: #14532d;
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      margin-top: 20px;
+      color: #166534;
+    }
+    button {
+      font-size: 20px;
+      padding: 14px 28px;
+      background-color: #22c55e;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #16a34a;
+    }
+    #result {
+      font-size: 24px;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+    #note {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <h1>今晚吃什麼？<br>高血壓友善版</h1>
+  <button onclick="spin()">轉吧！</button>
+  <div id="result"></div>
+  <div id="note">建議：少鹽、少醬油、多蔬菜、多喝水 💧🥦</div>
+
+  <script>
+    const meals = [
+      "和風涼拌雞胸 + 糙米飯",
+      "番茄鮮菇義大利麵（少鹽）",
+      "蔬菜豆腐火鍋（無湯底粉）",
+      "鮭魚便當（去皮、多青菜）",
+      "燙青菜 + 地瓜 + 煎豆腐",
+      "韓式拌飯（減醬版）",
+      "鯛魚湯 + 雜糧飯",
+      "雞絲涼麵（無美乃滋）",
+      "山藥蓮子粥 + 青花菜",
+      "紫米飯糰 + 清炒時蔬"
+    ];
+
+    function spin() {
+      const i = Math.floor(Math.random() * meals.length);
+      document.getElementById("result").textContent = "今晚推薦你吃：「" + meals[i] + "」";
+    }
+  </script>
+</body>
+</html>
+Commit new file
+[add index.html]
+[ Create index.html ] 按鈕
